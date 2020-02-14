@@ -58,7 +58,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
       this.sub2 = this.weather.getCurrentTemp(this.city).subscribe((temperature) => this.temp = temperature);
       this.sub3 = this.weather.getCurrentHum(this.city).subscribe((humidity) => this.hum = humidity);
       this.sub4 = this.weather.getCurrentWind(this.city).subscribe((windspeed) => this.wind = windspeed);
-      this.sub5 = this.weather.getForeCast(this.city).subscribe((data: any) => {
+      this.sub5 = this.weather.getForecast(this.city).subscribe((data: any) => {
         console.log(data);
         // tslint:disable-next-line: prefer-for-of
         for (let i = 0; i < data.length; i++) {
